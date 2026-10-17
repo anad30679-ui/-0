@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b18">
+<title>الذكاء الاصطناعي | تجربة معرفية ثلاثية الأبعاد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="noise" aria-hidden="true"></div>
+<div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+
+<header class="nav-wrap">
+  <a class="brand" href="#home" aria-label="العودة إلى البداية">
+    <span class="brand-cube"><i>AI</i></span>
+    <span class="brand-copy"><b>آفاق الذكاء الاصطناعي</b><small>رحلة معرفية تفاعلية</small></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#explore">استكشف البحث</a><a href="#about">عن التجربة</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="motionToggle" title="إيقاف الحركة" aria-label="إيقاف الحركة">Ⅱ</button>
+    <button class="theme-btn" id="themeToggle"><span id="themeSymbol">☼</span><span id="themeText">الوضع النهاري</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="overline"><span class="pulse-dot"></span> المعرفة تصنع المستقبل <span class="overline-line"></span></div>
+    <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <h1>فوائد وأضرار<br><span class="gradient-text">الذكاء الاصطناعي</span></h1>
+    <p class="hero-lead">تجربة تفاعلية تستكشف كيف يعيد الذكاء الاصطناعي تشكيل عالمنا، من فرص التطور والإبداع إلى التحديات التي تتطلب وعيًا ومسؤولية.</p>
+    <div class="hero-buttons">
+      <a class="btn-primary" href="#explore"><span>ابدأ الرحلة</span><b>↙</b></a>
+      <button class="btn-ghost" id="scrollHint"><span class="play-icon">▷</span> اكتشف ما بداخل البحث</button>
+    </div>
+    <div class="hero-stats">
+      <div><strong>03</strong><span>أقسام تفاعلية</span></div><div class="stat-rule"></div>
+      <div><strong>10</strong><span>فوائد رئيسية</span></div><div class="stat-rule"></div>
+      <div><strong>08</strong><span>تحديات ومخاطر</span></div>
+    </div>
+  </div>
+  <div class="visual-stage" id="visualStage">
+    <div class="stage-label label-top"><span class="label-pip"></span> SYSTEM ONLINE <small>نظام معرفي تفاعلي</small></div>
+    <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+    <div class="planet-shadow"></div>
+    <div class="ai-planet" id="aiPlanet">
+      <div class="planet-surface"></div>
+      <div class="planet-latitude latitude-1"></div><div class="planet-latitude latitude-2"></div>
+      <div class="planet-longitude longitude-1"></div><div class="planet-longitude longitude-2"></div>
+      <div class="planet-glow"></div><div class="planet-core">AI</div>
+      <span class="planet-dot dot-1"></span><span class="planet-dot dot-2"></span><span class="planet-dot dot-3"></span>
+    </div>
+    <div class="float-chip chip-data"><span class="chip-icon">⌘</span><span><b>تحليل البيانات</b><small>DATA ANALYSIS</small></span></div>
+    <div class="float-chip chip-learn"><span class="chip-icon">✳</span><span><b>التعلّم الذكي</b><small>MACHINE LEARNING</small></span></div>
+    <div class="float-chip chip-future"><span class="chip-icon">↗</span><span><b>رؤية المستقبل</b><small>FUTURE INSIGHTS</small></span></div>
+    <div class="stage-bottom"><span class="stage-line"></span><span>01 — INTELLIGENCE / HUMANITY</span></div>
+  </div>
+  <div class="scroll-cue"><span></span> مرّر للأسفل للاستكشاف</div>
+</section>
+
+<section class="explore section" id="explore">
+  <div class="section-intro">
+    <div><span class="eyebrow">محتوى البحث</span><h2>ثلاث بوابات إلى المعرفة<span class="tiny-star">✳</span></h2></div>
+    <p>اختر بوابة لفتح محتواها. الكلمات التي تحتها خط منقّط تحمل تعريفات إضافية؛ مرّر المؤشر فوقها أو اضغط عليها.</p>
+  </div>
+  <div class="portal-grid">
+    <button class="portal portal-intro" data-section="intro">
+      <span class="portal-index">01 <i> / INTRODUCTION</i></span>
+      <span class="portal-art art-book"><span class="book-page page-left"></span><span class="book-page page-right"></span><span class="art-spark">✦</span></span>
+      <span class="portal-title">مقدمة البحث</span><span class="portal-desc">مدخل إلى مفهوم الذكاء الاصطناعي وأهميته في العصر الحديث.</span>
+      <span class="portal-open">افتح القسم <b>↙</b></span><span class="portal-corner">↗</span>
+    </button>
+    <button class="portal portal-benefits" data-section="benefits">
+      <span class="portal-index">02 <i> / BENEFITS</i></span>
+      <span class="portal-art art-prism"><span class="prism-core">✧</span><span class="prism-ring ring-a"></span><span class="prism-ring ring-b"></span><span class="prism-star">✦</span></span>
+      <span class="portal-title">فوائد الذكاء الاصطناعي</span><span class="portal-desc">عشرة مجالات يساهم فيها في تطوير الخدمات وتحسين الأداء.</span>
+      <span class="portal-open">اكتشف الفوائد <b>↙</b></span><span class="portal-corner">↗</span>
+    </button>
+    <button class="portal portal-harms" data-section="harms">
+      <span class="portal-index">03 <i> / CHALLENGES</i></span>
+      <span class="portal-art art-shield"><span class="shield-outline">◇</span><span class="shield-core">!</span><span class="shield-orbit"></span></span>
+      <span class="portal-title">أضرار الذكاء الاصطناعي</span><span class="portal-desc">المخاطر والتحديات التي تجعل الاستخدام المسؤول ضرورة.</span>
+      <span class="portal-open">افهم المخاطر <b>↙</b></span><span class="portal-corner">↗</span>
+    </button>
+  </div>
+</section>
+
+<section class="reader-section" id="readerSection">
+  <div class="reader-placeholder" id="readerPlaceholder">
+    <div class="placeholder-orb"><span>✦</span></div>
+    <span class="eyebrow">مساحة القراءة</span><h2>اختر بوابة لبدء الاستكشاف</h2>
+    <p>سيظهر محتوى البحث هنا بتنسيق واضح، مع بطاقات تفاعلية وتعريفات للمصطلحات المهمة.</p>
+  </div>
+  <article class="reader hidden" id="reader">
+    <div class="reader-head">
+      <div><span class="eyebrow" id="readerEyebrow">قسم البحث</span><h2 id="readerTitle"></h2><p id="readerSummary"></p></div>
+      <button class="close-btn" id="closeReader" aria-label="إغلاق القسم">×</button>
+    </div>
+    <div class="reader-progress"><span id="progressLabel">01 / 03</span><div><i id="progressBar"></i></div></div>
+    <div class="reader-grid" id="readerGrid"></div>
+    <div class="reader-end"><span class="end-symbol">✧</span><p>المعرفة قوة، والاستخدام الواعي هو ما يصنع الفرق.</p><button id="backToPortals">العودة إلى الأقسام ↑</button></div>
+  </article>
+</section>
+
+<section class="closing" id="about">
+  <div class="closing-orb">AI</div>
+  <div class="closing-copy"><span class="eyebrow">الخلاصة</span><h2>المستقبل ليس للتقنية وحدها،<br><span class="gradient-text">بل لمن يحسن استخدامها.</span></h2><p>يقدم الذكاء الاصطناعي فرصًا واسعة في الطب والتعليم والصناعة وغيرها، لكن تحقيق الفائدة يتطلب حماية الخصوصية، ومراجعة النتائج، والانتباه إلى المخاطر، والحفاظ على دور الإنسان في اتخاذ القرار.</p></div>
+  <div class="closing-mark">THINK<br><span>RESPONSIBLY</span></div>
+</section>
+</main>
+
+<footer class="footer">
+  <a class="brand" href="#home"><span class="brand-cube"><i>AI</i></span><span class="brand-copy"><b>آفاق الذكاء الاصطناعي</b><small>بحث جامعي تفاعلي</small></span></a>
+  <span class="footer-note">صُمّم للتعلّم والاستكشاف <b>✦</b> <span id="year"></span></span>
+  <a class="to-top" href="#home">العودة للبداية ↑</a>
+</footer>
+<div class="term-tooltip" id="termTooltip" role="tooltip"></div>
+<script src="script.js"></script>
+</body>
+</html>
